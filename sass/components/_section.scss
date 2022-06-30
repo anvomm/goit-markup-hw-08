@@ -1,0 +1,25 @@
+.section {
+    padding: 94px 0px;
+
+    &_no-padding-top {
+        padding-top: 0;
+    }
+
+        &_other-background-color {
+            background-color: var(--light-grey-background-color);
+        }
+}
+
+.section__title {
+    margin-bottom: 50px;
+
+    @include font-sizing (36px, 1.17);
+    font-weight: 700;
+    text-align: center;
+
+    color: var(--title-color);
+
+    &_visually-hidden {
+        @extend %visually-hidden;
+    }
+}

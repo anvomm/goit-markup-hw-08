@@ -1,0 +1,29 @@
+.subscription-form__input {
+    padding-left: 16px;
+    width: 358px;
+    height: 50px;
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+
+    @include font-sizing (16px, 1.25);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    background-color: var(--grey-background-color);
+    color: rgba(255, 255, 255, 0.6);
+
+    &::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+    }
+}
+.subscription-form__button {
+    display: inline-flex;
+    align-items: center;
+    min-width: 166px;
+    padding: 10px 29px;
+    margin-left: 12px;
+}
+
+.subscription-form__button-icon {
+    margin-left: 10px;
+    fill: currentColor;
+}
