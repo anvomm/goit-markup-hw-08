@@ -14,7 +14,7 @@
   --icon-background-color: #AFB1B8;
 }
 
-.advantages__icon-box {
+.accounts, .advantages__icon-box, .social-icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -294,12 +294,19 @@ body {
     letter-spacing: 0.03em;
   }
 }
-.section__uppercase-title {
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  font-weight: 700;
-  text-transform: uppercase;
+.social-item {
+  width: 44px;
+  height: 44px;
+}
+.social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-icon {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  fill: currentColor;
 }
 
 .header__container {
@@ -641,5 +648,88 @@ body {
     text-transform: uppercase;
     color: var(--light-background-color);
     background-color: rgba(47, 48, 58, 0.8);
+  }
+}
+.team__box {
+  padding-top: 30px;
+  padding-bottom: 24px;
+}
+
+.team__member {
+  background-color: var(--light-background-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team__title,
+.team__text {
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.team__title {
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: var(--title-color);
+}
+
+.accounts {
+  margin-top: 16px;
+}
+
+.accounts__link {
+  color: var(--icon-background-color);
+  background-color: var(--light-background-color);
+}
+
+@media screen and (max-width: 767px) {
+  .team__member:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .team {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .team__member {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .team__member:nth-child(2n+1) {
+    margin-right: 30px;
+  }
+
+  .team__member:not(:nth-last-child(-n+2)) {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__member {
+    flex-basis: calc((100% - 90px) / 4);
+  }
+  .team__member:not(:nth-child(4n)) {
+    margin-right: 30px;
+  }
+  .team__member:not(:nth-last-child(-n+4)) {
+    margin-bottom: 30px;
+  }
+
+  .accounts__link {
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .accounts__link:hover, .accounts__link:focus {
+    background-color: var(--accent-color);
+  }
+
+  .accounts__icon {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .accounts__link:hover .accounts__icon, .accounts__link:focus .accounts__icon {
+    fill: var(--light-background-color);
   }
 }/*# sourceMappingURL=main.css.map */
