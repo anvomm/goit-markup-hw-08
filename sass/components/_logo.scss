@@ -4,6 +4,13 @@
     font-weight: 700;
     color: var(--accent-color);
 }
+@media screen and (min-width: 1200px) {
+    .logo {
+        font-size: 26px;
+        line-height: 1.16;
+        letter-spacing: 0.03em;
+    }
+}
 
 //.logo {
 //    @include font-sizing (26px, 1.19);
