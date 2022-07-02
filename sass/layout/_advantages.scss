@@ -1,16 +1,3 @@
-.advantages {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.advantages__item {
-    flex-basis: calc((100% - 90px) / 4);
-
-    &:not(:last-child) {
-        margin-right: 30px;
-    }
-}
-
 .advantages__icon-box {
     @extend %flex-centering;
     background-color: var(--light-grey-background-color);
@@ -19,13 +6,88 @@
     height: 120px;
     margin-bottom: 30px;
 }
-
 .advantage__title {
     margin-bottom: 10px;
+    @include font-sizing (14px, 1.14);
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
 
     color: var(--title-color);
 }
-
 .advantage__description {
-    @include font-sizing (14px, 1.71);
+    @include font-sizing (14px, 1.71);   
 }
+
+@media screen and (max-width: 767px) {
+    .advantages__item:not(:last-child) {
+        margin-bottom: 30px;
+    }    
+}
+
+@media screen and (min-width: 768px) {
+    .advantages {
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+
+    .advantages__item {
+        flex-basis: calc((100% - 30px) / 2);
+           
+        &:not(:nth-child(2n)) {
+            margin-right: 30px;
+        }
+    }
+    .advantage__title {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .advantages__item:not(:nth-last-child(-n + 2)) {
+            margin-bottom: 30px;
+        }
+}
+
+@media screen and (min-width: 1200px) {
+    .advantages__item {
+       flex-basis: calc((100% - 90px) / 4);
+ 
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+}
+
+//.advantages {
+//    display: flex;
+//    flex-wrap: wrap;
+//}
+
+//.advantages__item {
+//   flex-basis: calc((100% - 90px) / 4);
+
+//    &:not(:last-child) {
+//        margin-right: 30px;
+//    }
+//}
+
+//.advantages__icon-box {
+//    @extend %flex-centering;
+//    background-color: var(--light-grey-background-color);
+//    border-radius: 4px;
+//    width: 100%;
+//    height: 120px;
+//    margin-bottom: 30px;
+//}
+
+//.advantage__title {
+//    margin-bottom: 10px;
+
+//    color: var(--title-color);
+//}
+
+//.advantage__description {
+//    @include font-sizing (14px, 1.71);
+//}
