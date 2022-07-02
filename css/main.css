@@ -602,4 +602,44 @@ body {
   .advantages__item:not(:last-child) {
     margin-right: 30px;
   }
+}
+@media screen and (max-width: 1199px) {
+  .work__section {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .work__section {
+    padding-top: 0;
+  }
+
+  .work {
+    display: flex;
+  }
+
+  .work__item {
+    position: relative;
+    flex-basis: calc((100% - 60px) / 3);
+  }
+  .work__item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  .work__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    bottom: 0;
+    left: 0;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--light-background-color);
+    background-color: rgba(47, 48, 58, 0.8);
+  }
 }/*# sourceMappingURL=main.css.map */
