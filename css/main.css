@@ -323,6 +323,45 @@ body {
   fill: currentColor;
 }
 
+.subscription-form__input {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 50px;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  background-color: var(--grey-background-color);
+  color: #fff;
+}
+.subscription-form__input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscription-form__button {
+  display: inline-flex;
+  align-items: center;
+  min-width: 166px;
+  padding: 10px 29px;
+}
+
+.subscription-form__button-icon {
+  margin-left: 10px;
+  fill: currentColor;
+}
+
+@media screen and (min-width: 480px) {
+  .subscription-form__input {
+    max-width: 450px;
+  }
+}
 .header__container {
   display: flex;
   align-items: center;
@@ -816,4 +855,77 @@ body {
   .clients__item:not(:last-child) {
     margin-right: 30px;
   }
+}
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--grey-background-color);
+  width: 100%;
+}
+
+.footer__contacts {
+  text-align: center;
+}
+
+.footer__logo {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.logo_light {
+  color: var(--light-background-color);
+}
+
+.contact-info {
+  font-style: normal;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.contact-info__address {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  display: inline-block;
+  color: var(--light-background-color);
+}
+
+.contact-info__mail,
+.contact-info__phone {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--transparent-white-color);
+}
+
+.contact-info__item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.social-networks,
+.footer-subscription {
+  text-align: center;
+}
+
+.footer-social-networks__title,
+.footer-subscription__title {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--light-background-color);
+}
+
+.footer-social-networks {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.footer-social-networks__link {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--light-background-color);
 }/*# sourceMappingURL=main.css.map */
