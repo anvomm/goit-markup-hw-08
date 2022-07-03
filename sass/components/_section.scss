@@ -8,20 +8,46 @@
     &_other-background-color {
         background-color: var(--light-grey-background-color);
     }
+
+    @media screen and (min-width: 1200px) {
+        padding: 94px 0px;
+    }
+    
+        
 }
 .section__title {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 
-    @include font-sizing (36px, 1.17);
+    @include font-sizing (28px, 1.18);
     font-weight: 700;
     text-align: center;
 
     color: var(--title-color);
-
+    
     &_visually-hidden {
         @extend %visually-hidden;
     }
+
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 50px;
+        
+        @include font-sizing (36px, 1.17);
+    }
+
 }
+//.section__title {
+//    margin-bottom: 50px;
+
+//    @include font-sizing (36px, 1.17);
+//    font-weight: 700;
+//    text-align: center;
+
+//    color: var(--title-color);
+
+//    &_visually-hidden {
+//        @extend %visually-hidden;
+//    }
+//}
 
 @media screen and (min-width: 1200px) {
     .section {
