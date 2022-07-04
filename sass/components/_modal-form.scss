@@ -89,6 +89,7 @@
 
 .modal-form__checkbox-text {
     @extend %flex-centering;
+    flex-wrap: wrap;
 
     margin-bottom: 31px;
 

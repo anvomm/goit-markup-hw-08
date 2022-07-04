@@ -512,6 +512,7 @@ body {
   position: absolute;
 }
 .modal-form__checkbox-text {
+  flex-wrap: wrap;
   margin-bottom: 31px;
   font-size: 12px;
   line-height: 1.17;
