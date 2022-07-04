@@ -19,19 +19,58 @@
                 <li class="menu__item"><a class="menu__link" href="">Контакты</a></li>
             </ul>
         </nav>
-        <ul class="header-contact-list">
-            <li class="header-contact-list__item"><a class="header-contact-list__link"
+        <ul class="contacts">
+            <li class="contacts__item"><a class="contacts__link"
                     href="mailto:info@devstudio.com">
-                    <svg class="header-contact-list__icon" width="16" height="12">
+                    <svg class="contacts__icon" width="16" height="12">
                         <use href="./images/sprite.svg#letter"></use>
                     </svg>
                     info@devstudio.com</a></li>
-            <li class="header-contact-list__item"><a class="header-contact-list__link" href="tel:+380961111111">
-                    <svg class="header-contact-list__icon" width="10" height="16">
+            <li class="contacts__item"><a class="contacts__link" href="tel:+380961111111">
+                    <svg class="contacts__icon" width="10" height="16">
                         <use href="./images/sprite.svg#smartphone"></use>
                     </svg>
                     +38 096 111 11 11</a></li>
         </ul>
+        <button type="button" class="mobile-menu__open-button" data-menu-open>
+            <svg class="mobile-menu__open-button-icon" width="40" height="40" aria-label="Переключатель мобильного меню">
+                <use href="./images/sprite.svg#menu"></use>
+            </svg>
+        </button>
+        <div class="mobile-menu" data-menu>
+            <div class="container mobile-menu__container">
+                <div class="mobile-menu__upper-wrap">
+                    <button type="button" class="mobile-menu__close-button" data-menu-close>
+                        <svg class="mobile-menu__close-button-icon" width="40" height="40"
+                            aria-label="Переключатель мобильного меню">
+                            <use href="./images/sprite.svg#menu_close"></use>
+                        </svg>
+                    </button>
+                    <ul class="mobile-menu__pages">
+                        <li class="mobile-menu__page-item"><a class="mobile-menu__page-link"
+                                href="./index.html">Студия</a></li>
+                        <li class="mobile-menu__page-item"><a class="mobile-menu__page-link  mobile-menu__page-link_active"
+                                href="./portfolio.html">Портфолио</a></li>
+                        <li class="mobile-menu__page-item"><a class="mobile-menu__page-link" href="">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="mobile-menu__lower-wrap">
+                    <ul class="mobile-menu__contacts">
+                        <li class="mobile-menu__phone"><a class="mobile-menu__phone-link" href="tel:+380961111111">+38 096 111
+                                11 11</a>
+                        </li>
+                        <li class="mobile-menu__mail"><a class="mobile-menu__mail-link"
+                                href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                    </ul>
+                    <ul class="mobile-menu__social">
+                        <li class="mobile-menu__social-item"><a class="mobile-menu__social-link" href="">Instagram</a></li>
+                        <li class="mobile-menu__social-item"><a class="mobile-menu__social-link" href="">Twitter</a></li>
+                        <li class="mobile-menu__social-item"><a class="mobile-menu__social-link" href="">Facebook</a></li>
+                        <li class="mobile-menu__social-item"><a class="mobile-menu__social-link" href="">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 </header>
     <main>
@@ -49,128 +88,202 @@
                     <li class="project-card">
                         <a class="project-card__link" href="">
                             <div class="project-card__img-wrapper">
-                                <img src="./images/portfolio/technokrjak.jpg" alt="главная страница сайта технокряк" width="370" height="294">
+                                <picture>
+                                    <source
+                                        srcset="./images/portfolio/tehnokrjak_desk@1x.jpg 1x, ./images/portfolio/tehnokrjak_desk@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source
+                                        srcset="./images/portfolio/tehnokrjak_tab@1x.jpg 1x, ./images/portfolio/tehnokrjak_tab@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source
+                                        srcset="./images/portfolio/tehnokrjak_mob@1x.jpg 1x, ./images/portfolio/tehnokrjak_mob@2x.jpg 2x"
+                                        media="(max-width: 767px)">
+                                    <img src="./images/portfolio/tehnokrjak_tab@1x.jpg" alt="главная страница сайта технокряк">
+                                </picture>
                                 <p class="project-card__overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
                                     Все это позволит посетителю получить
                                     исчерпывающие сведения о компании или частном лице</p>
                             </div>
                             <div class="project-card__bottom">
                                 <h2 class="project-card__title">Технокряк</h2>
-                                <p class="project-card__filter-class">Веб-сайт</p>
+                                <p class="project-card__text">Веб-сайт</p>
                             </div>
                         </a>
                     </li>
                     <li class="project-card">
                         <a class="project-card__link" href="">
                             <div class="project-card__img-wrapper">
-                                <img src="./images/portfolio/new_orlean_vs_golden_star.jpg" alt="постер к баскетбольному матчу" width="370"
-                                    height="294">
+                                <picture>
+                                    <source srcset="./images/portfolio/new_orlean_desk@1x.jpg 1x, ./images/portfolio/new_orlean_desk@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source srcset="./images/portfolio/new_orlean_tab@1x.jpg 1x, ./images/portfolio/new_orlean_tab@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source srcset="./images/portfolio/new_orlean_mob@1x.jpg 1x, ./images/portfolio/new_orlean_mob@2x.jpg 2x"
+                                        media="(max-width: 767px)">
+                                    <img src="./images/portfolio/new_orlean_tab@1x.jpg" alt="постер к баскетбольному матчу">
+                                </picture>
                                 <p class="project-card__overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
                                     Все это позволит посетителю получить
                                     исчерпывающие сведения о компании или частном лице</p>
                             </div>
                             <div class="project-card__bottom">
                                 <h2 class="project-card__title">Постер <span lang="en">Orlean vs Golden Star</span></h2>
-                                <p class="project-card__filter-class">Дизайн</p>
+                                <p class="project-card__text">Дизайн</p>
                             </div>
                         </a>
                     </li>
                     <li class="project-card">
                         <a class="project-card__link" href="">
                             <div class="project-card__img-wrapper">
-                                <img src="./images/portfolio/seafood_restaurant.jpg" alt="заглавная картинка приложения ресторана морепродуктов"
-                                    width="370" height="294">
+                                <picture>
+                                    <source srcset="./images/portfolio/seafood_desk@1x.jpg 1x, ./images/portfolio/seafood_desk@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source srcset="./images/portfolio/seafood_tab@1x.jpg 1x, ./images/portfolio/seafood_tab@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source srcset="./images/portfolio/seafood_mob@1x.jpg 1x, ./images/portfolio/seafood_mob@2x.jpg 2x"
+                                        media="(max-width: 767px)">
+                                    <img src="./images/portfolio/seafood_tab@1x.jpg" alt="заглавная картинка приложения ресторана морепродуктов">
+                                </picture>
                                 <p class="project-card__overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
                                     Все это позволит посетителю получить
                                     исчерпывающие сведения о компании или частном лице</p>
                             </div>
                             <div class="project-card__bottom">
                                 <h2 class="project-card__title">Ресторан <span lang="en">Seafood</span></h2>
-                                <p class="project-card__filter-class">Приложение</p>
+                                <p class="project-card__text">Приложение</p>
                             </div>
                         </a>
                     </li>
                     <li class="project-card">
                         <a class="project-card__link" href="">
                             <div class="project-card__img-wrapper">
-                                <img src="./images/portfolio/prime_project.jpg" alt="изображение наушников" width="370" height="294">
+                                <picture>
+                                    <source srcset="./images/portfolio/prime_desk@1x.jpg 1x, ./images/portfolio/prime_desk@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source srcset="./images/portfolio/prime_tab@1x.jpg 1x, ./images/portfolio/prime_tab@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source srcset="./images/portfolio/prime_mob@1x.jpg 1x, ./images/portfolio/prime_mob@2x.jpg 2x"
+                                        media="(max-width: 767px)">
+                                    <img src="./images/portfolio/prime_tab@1x.jpg" alt="изображение наушников">
+                                </picture>
                                 <p class="project-card__overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
                                     Все это позволит посетителю получить
                                     исчерпывающие сведения о компании или частном лице</p>
                             </div>
                             <div class="project-card__bottom">
                                 <h2 class="project-card__title">Проект <span lang="en">Prime</span></h2>
-                                <p class="project-card__filter-class">Маркетинг</p>
+                                <p class="project-card__text">Маркетинг</p>
                             </div>
                         </a>
                     </li>
                     <li class="project-card">
                         <a class="project-card__link" href="">
                             <div class="project-card__img-wrapper">
-                                <img src="./images/portfolio/boxes_project.jpg" alt="две коробки на белой поверхности" width="370" height="294">
+                                <picture>
+                                    <source srcset="./images/portfolio/boxes_desk@1x.jpg 1x, ./images/portfolio/boxes_desk@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source srcset="./images/portfolio/boxes_tab@1x.jpg 1x, ./images/portfolio/boxes_tab@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source srcset="./images/portfolio/boxes_mob@1x.jpg 1x, ./images/portfolio/boxes_mob@2x.jpg 2x"
+                                        media="(max-width: 767px)">
+                                    <img src="./images/portfolio/boxes_tab@1x.jpg" alt="две коробки на белой поверхности">
+                                </picture>
                                 <p class="project-card__overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
                                     Все это позволит посетителю получить
                                     исчерпывающие сведения о компании или частном лице</p>
                             </div>
                             <div class="project-card__bottom">
                                 <h2 class="project-card__title">Проект <span lang="en">Boxes</span></h2>
-                                <p class="project-card__filter-class">Приложение</p>
+                                <p class="project-card__text">Приложение</p>
                             </div>
                         </a>
                     </li>
                     <li class="project-card">
                         <a class="project-card__link" href="">
                             <div class="project-card__img-wrapper">
-                                <img src="./images/portfolio/inspiration_has_no_borders.jpg" alt="главная страница сайта" width="370" height="294">
+                                <picture>
+                                    <source srcset="./images/portfolio/inspiration_desk@1x.jpg 1x, ./images/portfolio/inspiration_desk@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source srcset="./images/portfolio/inspiration_tab@1x.jpg 1x, ./images/portfolio/inspiration_tab@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source srcset="./images/portfolio/inspiration_mob@1x.jpg 1x, ./images/portfolio/inspiration_mob@2x.jpg 2x"
+                                        media="(max-width: 767px)">
+                                    <img src="./images/portfolio/inspiration_tab@1x.jpg" alt="главная страница сайта">
+                                </picture>
                                 <p class="project-card__overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
                                     Все это позволит посетителю получить
                                     исчерпывающие сведения о компании или частном лице</p>
                             </div>
                             <div class="project-card__bottom">
                                 <h2 class="project-card__title" lang="en">Inspiration has no Borders</h2>
-                                <p class="project-card__filter-class">Приложение</p>
+                                <p class="project-card__text">Приложение</p>
                             </div>
                         </a>
                     </li>
                     <li class="project-card">
                         <a class="project-card__link" href="">
                             <div class="project-card__img-wrapper">
-                                <img src="./images/portfolio/limited_edition.jpg" alt="открытый журнал на белой поверхности" width="370" height="294">
+                                <picture>
+                                    <source srcset="./images/portfolio/limited_edition_desk@1x.jpg 1x, ./images/portfolio/limited_edition_desk@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source srcset="./images/portfolio/limited_edition_tab@1x.jpg 1x, ./images/portfolio/limited_edition_tab@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source srcset="./images/portfolio/limited_edition_mob@1x.jpg 1x, ./images/portfolio/limited_edition_mob@2x.jpg 2x"
+                                        media="(max-width: 767px)">
+                                    <img src="./images/portfolio/limited_edition_tab@1x.jpg" alt="открытый журнал на белой поверхности">
+                                </picture>
                                 <p class="project-card__overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
                                     Все это позволит посетителю получить
                                     исчерпывающие сведения о компании или частном лице</p>
                             </div>
                             <div class="project-card__bottom">
                                 <h2 class="project-card__title">Издание <span lang="en">Limited Edition</span></h2>
-                                <p class="project-card__filter-class">Дизайн</p>
+                                <p class="project-card__text">Дизайн</p>
                             </div>
                         </a>
                     </li>
                     <li class="project-card">
                         <a class="project-card__link" href="">
                            <div class="project-card__img-wrapper">
-                            <img src="./images/portfolio/lab_project.jpg" alt="белая этикетка с чёрной надписью" width="370" height="294">
+                            <picture>
+                                <source
+                                    srcset="./images/portfolio/lab_desk@1x.jpg 1x, ./images/portfolio/lab_desk@2x.jpg 2x"
+                                    media="(min-width: 1200px)">
+                                <source srcset="./images/portfolio/lab_tab@1x.jpg 1x, ./images/portfolio/lab_tab@2x.jpg 2x"
+                                    media="(min-width: 768px)">
+                                <source srcset="./images/portfolio/lab_mob@1x.jpg 1x, ./images/portfolio/lab_mob@2x.jpg 2x"
+                                    media="(max-width: 767px)">
+                                <img src="./images/portfolio/lab_tab@1x.jpg" alt="белая этикетка с чёрной надписью">
+                            </picture>
                             <p class="project-card__overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
                                 Все это позволит посетителю получить
                                 исчерпывающие сведения о компании или частном лице</p>
                            </div>
                             <div class="project-card__bottom">
                                 <h2 class="project-card__title">Проект <span lang="en">LAB</span></h2>
-                                <p class="project-card__filter-class">Маркетинг</p>
+                                <p class="project-card__text">Маркетинг</p>
                             </div>
                         </a>
                     </li>
                     <li class="project-card">
                         <a class="project-card__link" href="">
                             <div class="project-card__img-wrapper">
-                                <img src="./images/portfolio/growing_business.jpg" alt="человек работает на ноутбуке" width="370" height="294">
+                                <picture>
+                                    <source srcset="./images/portfolio/growing_business_desk@1x.jpg 1x, ./images/portfolio/growing_business_desk@2x.jpg 2x"
+                                        media="(min-width: 1200px)">
+                                    <source srcset="./images/portfolio/growing_business_tab@1x.jpg 1x, ./images/portfolio/growing_business_tab@2x.jpg 2x"
+                                        media="(min-width: 768px)">
+                                    <source srcset="./images/portfolio/growing_business_mob@1x.jpg 1x, ./images/portfolio/growing_business_mob@2x.jpg 2x"
+                                        media="(max-width: 767px)">
+                                    <img src="./images/portfolio/growing_business_tab@1x.jpg" alt="человек работает на ноутбуке">
+                                </picture>
                                 <p class="project-card__overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
                                     Все это позволит посетителю получить
                                     исчерпывающие сведения о компании или частном лице</p>
                             </div>
                             <div class="project-card__bottom">
                                 <h2 class="project-card__title" lang="en">Growing Business</h2>
-                                <p class="project-card__filter-class">Приложение</p>
+                                <p class="project-card__text">Приложение</p>
                             </div>
                         </a>
                     </li>
@@ -245,6 +358,7 @@
             </div>
         </div>
     </footer>
+    <script src="./js/menu.js"></script>
     
 </body>
 </html>
