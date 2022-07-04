@@ -1,3 +1,20 @@
+@media screen and (max-width: 479px) {
+    .mobile-menu__phone-link {
+        @include font-sizing (30px, 1.18, 0.02em);
+    }
+
+    .mobile-menu__social-item {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }    
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    .mobile-menu__phone-link {
+        @include font-sizing (34px, 1.18, 0.02em);
+    }
+}
+
 @media screen and (max-width: 767px) {
     .mobile-menu {
         position: fixed;
@@ -44,7 +61,7 @@
             fill: var(--accent-color);
         }
     }
-    .mobile-menu__page-link {
+    .mobile-menu__link {
         @include font-sizing (40px, 1.175, 0.02em);
         font-weight: 500;
 
@@ -53,13 +70,11 @@
         &_active {
             color: var(--accent-color);
         }
-
     }
-    .mobile-menu__page-item:not(:last-child) {
+    .mobile-menu__item:not(:last-child) {
         margin-bottom: 32px;
     }
     .mobile-menu__phone-link {
-        @include font-sizing (34px, 1.18, 0.02em);
         font-weight: 500;
         color: var(--accent-color);
     }
@@ -76,6 +91,7 @@
     }
     .mobile-menu__social {
         display: flex;
+        flex-wrap: wrap;
     }
     .mobile-menu__social-link {
         @include font-sizing (18px, 1.22, 0.02em);
