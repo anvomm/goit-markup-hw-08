@@ -279,9 +279,6 @@ body {
 .section {
   padding: 60px 0;
 }
-.section_no-padding-top {
-  padding-top: 0;
-}
 .section_other-background-color {
   background-color: var(--light-grey-background-color);
 }
