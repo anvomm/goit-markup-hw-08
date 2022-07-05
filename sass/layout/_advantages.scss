@@ -8,9 +8,7 @@
 }
 .advantage__title {
     margin-bottom: 10px;
-    @include font-sizing (14px, 1.14);
-    font-weight: 700;
-    text-transform: uppercase;
+    @extend %uppercase-title;
     text-align: center;
 
     color: var(--title-color);

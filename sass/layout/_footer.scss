@@ -35,9 +35,7 @@
     display: inline-block;
     margin-bottom: 20px;
 
-    @include font-sizing (14px, 1.14);
-    font-weight: 700;
-    text-transform: uppercase;
+    @extend %uppercase-title;
 
     color: var(--light-background-color);
 }
