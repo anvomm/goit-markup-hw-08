@@ -42,6 +42,8 @@
 .footer-social-networks {
     display: flex;
     justify-content: center;
+}
+.social-networks {
     margin-bottom: 60px;
 }
 .footer-social-networks__link {
@@ -52,16 +54,12 @@
 @media screen and (min-width: 768px) {
     .footer__container_left-side {
         display: flex;
-        justify-content: space-between;
     }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px){
-    .footer__contacts {
-        margin-left: 61px;
-    }
-    .social-networks {
-        margin-right: 74px;
+    .footer__container_left-side {
+        justify-content: space-around;
     }
 }
 
@@ -69,12 +67,15 @@
     .footer {
         text-align: center;
     }
-    .contact-info {
+    .footer__contacts {
         margin-bottom: 60px;
     }
 }
 
 @media screen and (min-width: 1200px) {
+    .footer__container_left-side {
+        justify-content: space-between;
+    }
     .contact-info__item:not(:last-child) {
         margin-bottom: 9px;
     }
