@@ -1238,10 +1238,6 @@ body {
   }
 }
 @media screen and (min-width: 1200px) {
-  .footer__container_left-side {
-    justify-content: space-between;
-  }
-
   .contact-info__item:not(:last-child) {
     margin-bottom: 9px;
   }
@@ -1330,7 +1326,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 77px 24px;
+  padding: 63px 24px;
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;

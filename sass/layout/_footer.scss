@@ -73,9 +73,7 @@
 }
 
 @media screen and (min-width: 1200px) {
-    .footer__container_left-side {
-        justify-content: space-between;
-    }
+    
     .contact-info__item:not(:last-child) {
         margin-bottom: 9px;
     }
