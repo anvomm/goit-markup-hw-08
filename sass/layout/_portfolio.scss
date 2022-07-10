@@ -4,7 +4,6 @@
 .project-card__link {
     color: inherit;
     display: block;
-    border-bottom: 1px solid var(--portfolio-card-border-color);
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover,
@@ -14,8 +13,8 @@
 }
 .project-card__bottom {
     padding: 20px 24px;
-    border-right: 1px solid var(--portfolio-card-border-color);
-    border-left: 1px solid var(--portfolio-card-border-color);
+    border: 1px solid var(--portfolio-card-border-color);
+    border-top: none;
 }
 .project-card__title {
     margin-bottom: 4px;
@@ -74,12 +73,13 @@
             margin-right: 30px;
         }
     }
-    .project-card {
+
+    .project-card__link {
         display: flex;
         flex-direction: column;
+        height: 100%;
     }
-    .project-card__link {
-        
+    .project-card__bottom {
         flex-grow: 1;
     }
 }
